@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.4.1'
 
+gem 'dry-auto_inject'
 gem 'rom-repository'
 gem 'rom-yaml'
 
