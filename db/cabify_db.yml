@@ -1,0 +1,28 @@
+pricing_rules:
+  - code: bulk-purchase
+    items:
+      - code: TSHIRT
+        discount: 1.0
+        quantity: 3
+
+  - code: buy-x-get-one-free
+    items:
+      - code: VOUCHER
+        discount:
+        quantity: 2
+
+products:
+  - code: VOUCHER
+    currency: EUR
+    name: Cabify Voucher
+    price: 5.0
+
+  - code: TSHIRT
+    currency: EUR
+    name: Cabify T-Shirt
+    price: 20.0
+
+  - code: MUG
+    currency: EUR
+    name: Cafify Coffee Mug
+    price: 7.5
