@@ -10,6 +10,10 @@
 class Container
   extend ::Dry::Container::Mixin
 
+  register :pricing_rules do
+    PricingRules::Manifest::ACTIVE.map(&:new)
+  end
+
   register :pricing_rule_repo do
     PricingRuleRepo.new(resolve(:rom))
   end
