@@ -79,6 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   dry-auto_inject
+  dry-struct
   pry
   rom-repository
   rom-yaml
