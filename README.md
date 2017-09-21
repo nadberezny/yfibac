@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/nadberezny/yfibac.svg?style=svg)](https://circleci.com/gh/nadberezny/yfibac)
+
 To run **tests** type:  
 `rspec`
 
