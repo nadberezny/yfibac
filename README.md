@@ -1,13 +1,15 @@
 [![CircleCI](https://circleci.com/gh/nadberezny/yfibac.svg?style=svg)](https://circleci.com/gh/nadberezny/yfibac)
 
-To run **tests** type:  
+To run **tests** type:
 `rspec`
 
-To run **console** type:  
+To run **console** type:
 `bin/console`
 
-The app is the implementation of Cabify's coding exercise:
+The app is the implementation of Cabify's Ruby coding exercise:
 https://gist.github.com/patriciagao/377dca8920ba3b1fc8da
+
+[Here](https://github.com/nadberezny/yfibac_elixir) you can find **Elixir** implementation of the same exercise.
 
 Those examples:
 ```
@@ -33,10 +35,10 @@ Object of `Checkout` class is the interface for `#scan` and `#total` actions.
 co = Checkout.new
 co.scan('VOUCHER')
 co.total
-```  
+```
 
 #### Scan operation
-Scan pipelines operations. Each operation responds to `#call` and takes as an input `CheckoutStruct` object 
+Scan pipelines operations. Each operation responds to `#call` and takes as an input `CheckoutStruct` object
 and outputs new `CheckoutStruct` object. It's implemented in such manner, that it can easily be wrapped in a
 computational context (Either monad) for some neat error handling. For example tt can be refactored with ease into `dry-transaction.`
 
@@ -56,7 +58,7 @@ Checkout.new(pricing_rules: my_pricing_rules)
 
 #### Defining new pricing rules
 To add a new rule simply:
-1. Define class inheriting from `BaseRule` that implements `#calculate_items`, 
+1. Define class inheriting from `BaseRule` that implements `#calculate_items`,
 which takes as input `Array<Checkout::ItemStruct>` and requires the same as output.
 2. Include new rule in `PricingRules::Manifest::ACTIVE`.
 
